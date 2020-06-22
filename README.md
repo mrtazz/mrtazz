@@ -1,4 +1,7 @@
-### Hi there 👋
+![I love coffee](http://gifs.unwiredcouch.com/gilmore-girls/i-love-coffee.gif)
+
+- :fax: https://unwiredcouch.com
+- :art: https://instagram.com/mrtazz
 
 <!--
 **mrtazz/mrtazz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
