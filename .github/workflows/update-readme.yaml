@@ -1,0 +1,29 @@
+name: README update
+
+on:
+  workflow_dispatch:
+  schedule:
+    # nightly at 5:30am
+    - cron: '30 5 * * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: make readme-update
+        run:  make readme
+
+      - name: commit changes
+        run: |
+					if [ -n git status -s 2> /dev/null ]; then
+          git config --global user.email "deploy@mrtazz.mrtazz.github.com"
+          git config --global user.name "deploy"
+          git add .
+          git commit -m "automated README update"
+          git push
+					end
+
