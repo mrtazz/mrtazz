@@ -9,8 +9,8 @@ readme:
 push-update:
 	if [ -n "$$(git status -s 2> /dev/null)" ]; then \
 		echo "Found changes, committing and pushing..."; \
-		export GIT_AUTHOR_NAME=deploy; \
-		export GIT_AUTHOR_EMAIL=deploy@mrtazz.mrtazz.github.com; \
+		export GIT_COMMITTER_NAME=deploy; \
+		export GIT_COMMITTER_EMAIL=deploy@mrtazz.mrtazz.github.com; \
 		git commit --all -m "automated README update" && git push; \
 	else \
 		echo "No changes detected."; \
