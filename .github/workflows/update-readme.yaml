@@ -14,16 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: make readme-update
-        run:  make readme
-
-      - name: commit changes
-        run: |
-					if [ -n git status -s 2> /dev/null ]; then
-          git config --global user.email "deploy@mrtazz.mrtazz.github.com"
-          git config --global user.name "deploy"
-          git add .
-          git commit -m "automated README update"
-          git push
-					end
+      - name: sync README
+        run:  make sync
 
