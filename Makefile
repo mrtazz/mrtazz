@@ -1,5 +1,5 @@
 README_URL := https://raw.githubusercontent.com/mrtazz/unwiredcouch.com/refs/heads/main/content/github/readme.md
-GIT_AUTHOR_DETAILS ?= GIT_AUTHOR_NAME=deploy GIT_AUTHOR_EMAIL=deploy@mrtazz.mrtazz.github.com
+GIT_AUTHOR_DETAILS ?= GIT_COMMITTER_NAME=deploy GIT_COMMITTER_EMAIL=deploy@mrtazz.mrtazz.github.com
 
 .PHONY: readme
 readme:
